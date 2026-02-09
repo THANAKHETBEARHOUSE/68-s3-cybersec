@@ -1,0 +1,10 @@
+services:
+  s3db:
+    image: postgres:latest
+    container_name: 68-s3-database
+    environment:
+      POSTGRES_USER: ${ATABASE_USER}
+      POSTGRES_PASSWORD: ${ATABASE_PASS}
+      POSTGRES_DB: ${ATABASE_NAME}
+    ports:
+      - ${ATABASE_PORT}:5432
